@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/custom.css" />
+    <link rel="stylesheet" href="styles/root.css" />
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/tour.min.css">
+</head>
+<body class="h-screen w-full">
+    <main class="flex w-full h-full cm lightapp">
+        <aside class="h-full relative">
+          <input type="checkbox" class="hidden" id="sidebar-toggle" />
+          <label
+            for="sidebar-toggle"
+            class="absolute lg:hidden top-1 -right-9 md:-right-10 px-1"
+          >
+            <i class="ri-bar-chart-horizontal-line"></i>
+          </label>
+          <div class="h-full sidebar">
+            <div class="sidebar-container">
+              <div class="p-4">
+                <a href="index.html" class="flex w-20"
+                  ><img class="w-20" src="/images/logo.png" alt="Dots Logo"
+                /></a>
+              </div>
+              <div class="sidebar-content">
+                <ul class="space-y-1">
+                  
+                  <li>
+                    <div
+                      role="button"
+                      onclick="toggleDropMenu(this)"
+                      class="drop-menu cursor-pointer rounded-r-lg"
+                    >
+                      <div
+                        class="w-full px-6 py-1 flex justify-between items-center"
+                        href="#"
+                      >
+                        <span>Overview</span>
+                        <i
+                          class="ri-arrow-right-s-line text-c-yellow big-right-arrow text-2xl"
+                        ></i>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      role="button"
+                      onclick="toggleDropMenu(this)"
+                      class="drop-menu cursor-pointer rounded-r-lg"
+                    >
+                      <div
+                        class="w-full px-6 py-1 flex justify-between items-center"
+                        href="#"
+                      >
+                        <span>Reports and Analytics</span>
+                        <i
+                          class="ri-arrow-right-s-line text-c-yellow big-right-arrow text-2xl"
+                        ></i>
+                      </div>
+                      <ul class="drop-list text-sm space-y-1">
+                        <li>
+                          <a
+                            href="#"
+                            class="block py-1 px-8 rounded-r-md w-full flex justify-between items-center"
+                          >
+                            <span>Activity Reports</span>
+                            <i
+                              class="ri-arrow-right-s-line text-c-yellow text-2xl"
+                            ></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block py-1 px-8 rounded-r-md w-full flex justify-between items-center"
+                          >
+                            <span>Custom Graph</span>
+                            <i
+                              class="ri-arrow-right-s-line text-c-yellow text-2xl"
+                            ></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="Benchmark-settings.html"
+                            class="block py-1 px-8 rounded-r-md w-full flex justify-between items-center"
+                          >
+                            <span>Benchmark settings</span>
+                            <i
+                              class="ri-arrow-right-s-line text-c-yellow text-2xl"
+                            ></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      role="button"
+                      onclick="toggleDropMenu(this)"
+                      class="drop-menu cursor-pointer rounded-r-lg"
+                    >
+                      <div
+                        class="w-full px-6 py-1 flex justify-between items-center"
+                        href="#"
+                      >
+                        <span>System setting</span>
+                        <i
+                          class="ri-arrow-right-s-line text-c-yellow big-right-arrow text-2xl"
+                        ></i>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      role="button"
+                      onclick="toggleDropMenu(this)"
+                      class="drop-menu cursor-pointer rounded-r-lg"
+                    >
+                      <div
+                        class="w-full px-6 py-1 flex justify-between items-center"
+                        href="#"
+                      >
+                        <span>Client Management</span>
+                        <i
+                          class="ri-arrow-right-s-line text-c-yellow big-right-arrow text-2xl"
+                        ></i>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      role="button"
+                      onclick="toggleDropMenu(this)"
+                      class="drop-menu cursor-pointer rounded-r-lg"
+                    >
+                      <div
+                        class="w-full px-6 py-1 flex justify-between items-center"
+                        href="#"
+                      >
+                        <span>Display</span>
+                        <i
+                          class="ri-arrow-right-s-line text-c-yellow big-right-arrow text-2xl"
+                        ></i>
+                      </div>
+                    </div>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </main>
+    <script src="script/sidebar.js"></script>
+    
+</body>
+</html>
