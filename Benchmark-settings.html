@@ -187,8 +187,8 @@
                         
                         <!-- Button section -->
                         <div class="flex flex-wrap gap-6 md:gap-10 justify-start md:justify-center">
-                            <button type="button" onclick="showTab('bk-user')" class="bk-tab-control "  data-tab="bk-user">User management</button>
-                            <button type="button" onclick="showTab('bk-file')" class="bk-tab-control "  data-tab="bk-file">File</button>
+                            <button type="button" onclick="showTab('bk-user')" class="bk-tab-control "   data-tab="bk-user">User management</button>
+                            <button type="button" onclick="showTab('bk-file')" class="bk-tab-control active"  data-tab="bk-file">File</button>
                             <button type="button" onclick="showTab('bk-security')" class="bk-tab-control "  data-tab="bk-security">Security</button>
                             <button type="button" onclick="showTab('bk-network')" class="bk-tab-control "  data-tab="bk-network">Network</button>
                             <button type="button" onclick="showTab('bk-software')" class="bk-tab-control "  data-tab="bk-software">Software</button>
@@ -197,7 +197,7 @@
                         </div>
                         
                         <div class="pt-4 ">
-                            <div class="tab-content media-preview-main active" id="bk-user">
+                            <div class="tab-content media-preview-main" id="bk-user">
                                 <form action="#">
                                     <div class="py-2 font-medium">
                                         User Management
@@ -264,7 +264,7 @@
                                 </form>
                             </div>
 
-                            <div class="tab-content media-preview-main" id="bk-file">
+                            <div class="tab-content media-preview-main active" id="bk-file">
                               <form action="#">
                                 <div class="py-2 font-medium">
                                     File
