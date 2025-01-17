@@ -416,22 +416,16 @@ body .cm {
 }
 
 .bk-tab-control{
-  
-  background-color: whitesmoke;
-  color: black;
-  border: 1px ;
-  border-style: solid;
-  border-radius: 5px;
-  font-size: small;
+  border-bottom: 3px solid transparent;
+  font-size: medium;
 }
 .bk-tab-control:hover{
-  
+
   border-color: var(--color-dark-yellow);
-  
 }
 .bk-tab-control.active {
-  background-color:var(--color-dark-yellow);
   border-color: var(--color-dark-yellow);
+  font-weight: 500;
 }
 .button-rest{
   background-color: whitesmoke;
