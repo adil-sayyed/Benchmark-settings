@@ -47,7 +47,7 @@
                       </div>
                     </div>
                   </li>
-                  <li>
+                  <!-- <li>
                     <div
                       role="button"
                       onclick="toggleDropMenu(this)"
@@ -89,13 +89,122 @@
                           <a
                             href="Benchmark-settings.html"
                             class="block py-1 px-8 rounded-r-md w-full flex justify-between items-center"
+                            onclick="event.stopPropagation(); toggleSubDropadmin()"
                           >
                             <span>Benchmark settings</span>
                             <i
-                              class="ri-arrow-right-s-line text-c-yellow text-2xl"
+                              class="ri-arrow-right-s-line text-c-yellow text-2xl subdrop-right-benchmar-tab"
                             ></i>
                           </a>
+                          <ul class="drop-list text-sm space-y-1 block md:hidden " id="subdrop-benchmar-tab">
+                            <li>
+                              <a href="#" onclick="event.stopPropagation();showTab('bk-user')" class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center">
+                                <span>User Activity</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onclick="event.stopPropagation();showTab('bk-group')" class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center">
+                                <span>Group Activity</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onclick="event.stopPropagation();showTab('bk-RBAC')" class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center">
+                                <span>RBAC</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onclick="event.stopPropagation();showTab('bk-file')" class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center">
+                                <span>File Management</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onclick="event.stopPropagation();showTab('bk-security')" class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center">
+                                <span>Security Activity</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onclick="event.stopPropagation();showTab('bk-system-permission')" class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center">
+                                <span>System Performance Activity</span>
+                              </a>
+                            </li>
+                          </ul>
                         </li>
+                        
+                      </ul>
+                    </div>
+                  </li> -->
+                  <li>
+                    <div role="button" onclick="toggleDropMenu(this)" class="drop-menu cursor-pointer rounded-r-lg">
+                      <div class="w-full px-6 py-1 flex justify-between items-center" href="#">
+                        <span >Reports and Analytics</span>
+                        <i class="ri-arrow-right-s-line text-c-yellow transition-all text-2xl big-right-arrow"></i>
+                      </div>
+                      <ul class="drop-list text-sm space-y-1">
+                        <li>
+                          <a
+                          class="block py-1 px-8 rounded-r-md w-full flex justify-between items-center subdrop"
+                          
+                          href="#"
+                          >
+                            <span>Activity Reports</span>
+                            <i class="ri-arrow-right-s-line text-c-yellow text-2xl subdrop-right-user"></i>
+                          </a>
+                          
+                        
+                        </li>
+                        <li>
+                          <a
+                          class="block py-1 px-8 rounded-r-md w-full flex justify-between items-center subdrop"
+                          
+                          href="#"
+                          >
+                          <span class="py-2">Custom Graph</span>
+                          <i class="ri-arrow-right-s-line text-c-yellow text-2xl subdrop-right-user"></i>
+                        </a>
+                        
+                        
+                      </li>
+                      <li>
+                        <a class="block py-1 px-8 rounded-r-md w-full flex justify-between items-center subdrop"
+                        onclick="event.stopPropagation(); toggleSubDropadmin('subdrop-admin', this)"
+                        href="Benchmark-settings.html">
+                        <span>Benchmark settings</span>
+                            <i class="ri-arrow-right-s-line text-c-yellow text-2xl subdrop-right-admin"></i>
+                          </a>
+                          <ul class="drop-list text-sm space-y-1 block  hidden" id="subdrop-admin">
+                            <li>
+                              <a href="#" onclick="event.stopPropagation();showTab('bk-user')" class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center">
+                                <span>User Activity</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onclick="event.stopPropagation();showTab('bk-group')" class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center">
+                                <span>Group Activity</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onclick="event.stopPropagation();showTab('bk-RBAC')" class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center">
+                                <span>RBAC</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onclick="event.stopPropagation();showTab('bk-file')" class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center">
+                                <span>File Management</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onclick="event.stopPropagation();showTab('bk-security')" class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center">
+                                <span>Security Activity</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" onclick="event.stopPropagation();showTab('bk-system-permission')" class="block py-2 px-8 rounded-r-md w-full flex justify-between items-center">
+                                <span>System Performance Activity</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        
                       </ul>
                     </div>
                   </li>
@@ -133,6 +242,7 @@
                       </div>
                     </div>
                   </li>
+                  
                   <li>
                     <div
                       role="button"
@@ -150,7 +260,6 @@
                       </div>
                     </div>
                   </li>
-                  
                 </ul>
               </div>
             </div>
@@ -163,7 +272,8 @@
                 <div class="px-2 lg:px-5 py-6">
                     <div class="flex items-center gap-4">
                         <i class="ri-settings-3-fill ri-xl"></i>
-                        <span class="text-lg text-color-nav-black">Benchmark settings</span>
+                        <span class="text-lg text-color-nav-black">Reports and Analytics
+                        </span>
                     </div>
                 </div>
                 <!-- topTaskbar in desktop -->
@@ -171,7 +281,8 @@
                     <div class="w-full md:w-6/12 xl:w-8/12">
                         <div class="flex items-center gap-1 sm:gap-2">
                             <span class="text-c-light-black text-base whitespace-nowrap font-normal" >
-                            Benchmark settings
+                              Reports and Analytics
+
                             </span>
                             <i class="ri-arrow-right-line ri-lg text-c-light-black"></i>
                             <span class="font-semibold text-c-black text-base">
@@ -187,30 +298,30 @@
                         
                         <!-- Button section -->
                         <div class="flex flex-wrap gap-6 md:gap-10 justify-start md:justify-center">
-                            <button type="button" onclick="showTab('bk-user')" class="bk-tab-control "   data-tab="bk-user">User management</button>
-                            <button type="button" onclick="showTab('bk-file')" class="bk-tab-control active"  data-tab="bk-file">File</button>
-                            <button type="button" onclick="showTab('bk-security')" class="bk-tab-control "  data-tab="bk-security">Security</button>
-                            <button type="button" onclick="showTab('bk-network')" class="bk-tab-control "  data-tab="bk-network">Network</button>
-                            <button type="button" onclick="showTab('bk-software')" class="bk-tab-control "  data-tab="bk-software">Software</button>
-                            <button type="button" onclick="showTab('bk-location')" class="bk-tab-control "  data-tab="bk-location">Location</button>
-                            <button type="button" onclick="showTab('bk-system-permission')" class="bk-tab-control "  data-tab="bk-system-permission">System performance</button>
+                            <button type="button" onclick="showTab('bk-user')" class="bk-tab-control active"   data-tab="bk-user">User Activity</button>
+                            <button type="button" onclick="showTab('bk-group')" class="bk-tab-control "  data-tab="bk-group">Group Activity</button>
+                            <button type="button" onclick="showTab('bk-RBAC')" class="bk-tab-control "  data-tab="bk-RBAC"> RBAC</button>
+                            <button type="button" onclick="showTab('bk-file')" class="bk-tab-control "  data-tab="bk-file">File Management</button>
+                            <button type="button" onclick="showTab('bk-security')" class="bk-tab-control "  data-tab="bk-security">Security Activity</button>
+                            <button type="button" onclick="showTab('bk-system-permission')" class="bk-tab-control "  data-tab="bk-system-permission">System Performance Activity</button>
+                            
                         </div>
                         
                         <div class="pt-4 ">
-                            <div class="tab-content media-preview-main" id="bk-user">
+                            <div class="tab-content media-preview-main active" id="bk-user">
                                 <form action="#">
                                     <div class="py-2 font-medium">
-                                        User Management
+                                        User Activity
                                     </div>
                                     <hr>
                                     <div class="py-2">
                                       <div class="flex flex-col md:flex-row md:items-center gap-2">
-                                          <label class="w-full md:w-4/12 font-normal " for="most-accessed">Most Accessed File:</label>
+                                          <label class="w-full md:w-3/12 font-normal " for="most-accessed">Successful Logout (%) :</label>
                                           <input 
                                               id="most-accessed"
                                               type="text" 
                                               name="mostAccessed" 
-                                              placeholder="# of Accesses per File" 
+                                              placeholder="Please enter the value" 
                                               class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
                                           />
                                       </div>
@@ -218,12 +329,12 @@
                                   
                                     <div class="py-2">
                                         <div class="flex flex-wrap items-center gap-2">
-                                            <label class="w-full md:w-4/12 font-normal" for="files-deleted">Files Deleted by Users:</label>
+                                            <label class="w-full md:w-3/12 font-normal" for="files-deleted">Active Users (%) :</label>
                                             <input 
                                                 id="files-deleted"
                                                 type="text" 
                                                 name="filesDeleted" 
-                                                placeholder="% of Files Deleted" 
+                                                placeholder="Please enter the value" 
                                                 class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
                                             />
                                         </div>
@@ -231,29 +342,41 @@
                                     </div>
                                     <div class="py-2">
                                         <div class="flex flex-wrap items-center gap-2">
-                                            <label class="w-full md:w-4/12 font-normal" for="accessed-outside">Files Accessed Outside Business Hours:</label>
+                                            <label class="w-full md:w-3/12 font-normal" for="accessed-outside">Successful Login (%) :</label>
                                             <input 
                                                 id="accessed-outside"
                                                 type="text" 
                                                 name="accessedOutside" 
-                                                placeholder="% of Total Accesses" 
+                                                placeholder="Please enter the value" 
                                                 class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
                                             />
                                         </div>
                                     </div>
                                     <div class="py-2">
                                         <div class="flex flex-wrap items-center gap-2">
-                                            <label class="w-full md:w-4/12 font-normal" for="total-size">Total File Size:</label>
+                                            <label class="w-full md:w-3/12 font-normal" for="total-size">Max Size Space (%) :</label>
                                             <input 
                                                 id="total-size"
                                                 type="text" 
                                                 name="totalSize" 
-                                                placeholder="GB" 
+                                                placeholder="Please enter the value" 
                                                 class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
                                             />
                                         </div>
                                     </div>
-                                    <div class="flex mt-3 gap-4 justify-end py-6 px-12">
+                                    <div class="py-2">
+                                        <div class="flex flex-wrap items-center gap-2">
+                                            <label class="w-full md:w-3/12 font-normal" for="total-size">File Uses Size (%) :</label>
+                                            <input 
+                                                id="total-size"
+                                                type="text" 
+                                                name="totalSize" 
+                                                placeholder="Please enter the value" 
+                                                class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="flex mt-3 gap-4 justify-center py-6 px-12">
                                         <button type="reset" class="rounded-full px-8 py-2 text-sm border border-gray-300 hover:bg-gray-100">
                                             Reset
                                         </button>
@@ -264,20 +387,143 @@
                                 </form>
                             </div>
 
-                            <div class="tab-content media-preview-main active" id="bk-file">
+                            <div class="tab-content media-preview-main" id="bk-group">
+                              <form action="#">
+                               <div class="py-2 font-medium">
+                                Group Activity
+                               </div>
+                               <hr>
+                               <div class="py-2">
+                                 <div class="flex flex-col md:flex-row md:items-center gap-2">
+                                     <label class="w-full md:w-3/12 font-normal " for="most-accessed">File Sharing Between Groups (%) :</label>
+                                     <input 
+                                         id="most-accessed"
+                                         type="text" 
+                                         name="mostAccessed" 
+                                         placeholder="Please enter the value" 
+                                         class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
+                                     />
+                                 </div>
+                             </div>
+                             
+                               <div class="py-2">
+                                   <div class="flex flex-wrap items-center gap-2">
+                                       <label class="w-full md:w-3/12 font-normal" for="files-deleted">Size Used in Group (%) :</label>
+                                       <input 
+                                           id="files-deleted"
+                                           type="text" 
+                                           name="filesDeleted" 
+                                           placeholder="Please enter the value" 
+                                           class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
+                                       />
+                                   </div>
+                                   
+                               </div>
+                               <div class="py-2">
+                                   <div class="flex flex-wrap items-center gap-2">
+                                       <label class="w-full md:w-3/12 font-normal" for="accessed-outside">Max Size in Group (%) : </label>
+                                       <input 
+                                           id="accessed-outside"
+                                           type="text" 
+                                           name="accessedOutside" 
+                                           placeholder="Please enter the value" 
+                                           class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
+                                       />
+                                   </div>
+                               </div>
+                               <div class="py-2">
+                                   <div class="flex flex-wrap items-center gap-2">
+                                       <label class="w-full md:w-3/12 font-normal" for="total-size">Most Inactive Group (%) :</label>
+                                       <input 
+                                           id="total-size"
+                                           type="text" 
+                                           name="totalSize" 
+                                           placeholder="Please enter the value" 
+                                           class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
+                                       />
+                                   </div>
+                               </div>
+                               <div class="flex mt-3 gap-4 justify-end py-6 px-12">
+                                   <button type="reset" class="rounded-full px-8 py-2 text-sm border border-gray-300 hover:bg-gray-100">
+                                       Reset
+                                   </button>
+                                   <button type="submit" class="bg-black text-white rounded-full px-8 py-2 text-sm hover:bg-gray-800">
+                                       Save
+                                   </button>
+                               </div>
+                           </form>
+                           </div>
+
+                           <div class="tab-content media-preview-main" id="bk-RBAC">
+                            <form action="#">
+                            <div class="py-2 font-medium">
+                              Role-Based Access Control (RBAC)
+                            </div>
+                            <hr>
+                            <div class="py-2">
+                              <div class="flex flex-col md:flex-row md:items-center gap-2">
+                                  <label class="w-full md:w-3/12 font-normal " for="most-accessed">Most Inactive Roles (%) :</label>
+                                  <input 
+                                      id="most-accessed"
+                                      type="text" 
+                                      name="mostAccessed" 
+                                      placeholder="Please enter the Value" 
+                                      class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
+                                  />
+                              </div>
+                          </div>
+                          
+                            <div class="py-2">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <label class="w-full md:w-3/12 font-normal" for="files-deleted">Max Size Space (%) :</label>
+                                    <input 
+                                        id="files-deleted"
+                                        type="text" 
+                                        name="filesDeleted" 
+                                        placeholder="Please enter the Value" 
+                                        class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
+                                    />
+                                </div>
+                                
+                            </div>
+                            <div class="py-2">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <label class="w-full md:w-3/12 font-normal" for="accessed-outside">File Uses Size (%) :</label>
+                                    <input 
+                                        id="accessed-outside"
+                                        type="text" 
+                                        name="accessedOutside" 
+                                        placeholder="Please enter the Value" 
+                                        class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
+                                    />
+                                </div>
+                            </div>
+                            
+                            <div class="flex mt-3 gap-4 justify-end py-6 px-12">
+                                <button type="reset" class="rounded-full px-8 py-2 text-sm border border-gray-300 hover:bg-gray-100">
+                                    Reset
+                                </button>
+                                <button type="submit" class="bg-black text-white rounded-full px-8 py-2 text-sm hover:bg-gray-800">
+                                    Save
+                                </button>
+                            </div>
+                            </form>
+                          </div>
+
+                            <div class="tab-content media-preview-main " id="bk-file">
                               <form action="#">
                                 <div class="py-2 font-medium">
-                                    File
+                                    File Management
                                 </div>
                                 <hr>
                                 <div class="py-2">
                                   <div class="flex flex-col md:flex-row md:items-center gap-2">
-                                      <label class="w-full md:w-4/12 font-normal " for="most-accessed">Most Accessed File:</label>
+                                      <label class="w-full md:w-3/12 font-normal " for="most-accessed">Files Edit By User (%) :</label>
                                       <input 
                                           id="most-accessed"
                                           type="text" 
                                           name="mostAccessed" 
-                                          placeholder="# of Accesses per File" 
+                                          placeholder="Please enter the value" 
                                           class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
                                       />
                                   </div>
@@ -285,12 +531,12 @@
                               
                                 <div class="py-2">
                                     <div class="flex flex-wrap items-center gap-2">
-                                        <label class="w-full md:w-4/12 font-normal" for="files-deleted">Files Deleted by Users:</label>
+                                        <label class="w-full md:w-3/12 font-normal" for="files-deleted">Files Uploaded by Users (%) :</label>
                                         <input 
                                             id="files-deleted"
                                             type="text" 
                                             name="filesDeleted" 
-                                            placeholder="% of Files Deleted" 
+                                            placeholder="Please enter the value" 
                                             class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
                                         />
                                     </div>
@@ -298,24 +544,50 @@
                                 </div>
                                 <div class="py-2">
                                     <div class="flex flex-wrap items-center gap-2">
-                                        <label class="w-full md:w-4/12 font-normal" for="accessed-outside">Files Accessed Outside Business Hours:</label>
+                                        <label class="w-full md:w-3/12 font-normal" for="accessed-outside">File Types Accessed (%) :</label>
                                         <input 
                                             id="accessed-outside"
                                             type="text" 
                                             name="accessedOutside" 
-                                            placeholder="% of Total Accesses" 
+                                            placeholder="Please enter the value" 
                                             class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
                                         />
                                     </div>
                                 </div>
                                 <div class="py-2">
                                     <div class="flex flex-wrap items-center gap-2">
-                                        <label class="w-full md:w-4/12 font-normal" for="total-size">Total File Size:</label>
+                                        <label class="w-full md:w-3/12 font-normal" for="total-size">Deleted Files By Users (%) :</label>
                                         <input 
                                             id="total-size"
                                             type="text" 
                                             name="totalSize" 
-                                            placeholder="GB" 
+                                            placeholder="Please enter the value" 
+                                            class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="py-2">
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        <label class="w-full md:w-3/12 font-normal" for="total-size">Total File Extensions (%):</label>
+                                        <input 
+                                            id="total-size"
+                                            type="text" 
+                                            name="totalSize" 
+                                            placeholder="Please enter the value" 
+                                            class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="py-2">
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        <label class="w-full md:w-3/12 font-normal" for="total-size">Files Download by Users (%) :</label>
+                                        <input 
+                                            id="total-size"
+                                            type="text" 
+                                            name="totalSize" 
+                                            placeholder="Please enter the value" 
                                             class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
                                         />
                                     </div>
@@ -334,17 +606,17 @@
                             <div class="tab-content media-preview-main" id="bk-security">
                               <form action="#">
                                 <div class="py-2 font-medium">
-                                    Security
+                                    Security Activity
                                 </div>
                                 <hr>
                                 <div class="py-2">
                                   <div class="flex flex-col md:flex-row md:items-center gap-2">
-                                      <label class="w-full md:w-4/12 font-normal " for="most-accessed">Most Accessed File:</label>
+                                      <label class="w-full md:w-3/12 font-normal " for="most-accessed">Suspicious Login (%) :</label>
                                       <input 
                                           id="most-accessed"
                                           type="text" 
                                           name="mostAccessed" 
-                                          placeholder="# of Accesses per File" 
+                                          placeholder="Please enter the value" 
                                           class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
                                       />
                                   </div>
@@ -352,41 +624,18 @@
                               
                                 <div class="py-2">
                                     <div class="flex flex-wrap items-center gap-2">
-                                        <label class="w-full md:w-4/12 font-normal" for="files-deleted">Files Deleted by Users:</label>
+                                        <label class="w-full md:w-3/12 font-normal" for="files-deleted">Privilege Change (%) :</label>
                                         <input 
                                             id="files-deleted"
                                             type="text" 
                                             name="filesDeleted" 
-                                            placeholder="% of Files Deleted" 
+                                            placeholder="Please enter the value" 
                                             class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
                                         />
                                     </div>
                                     
                                 </div>
-                                <div class="py-2">
-                                    <div class="flex flex-wrap items-center gap-2">
-                                        <label class="w-full md:w-4/12 font-normal" for="accessed-outside">Files Accessed Outside Business Hours:</label>
-                                        <input 
-                                            id="accessed-outside"
-                                            type="text" 
-                                            name="accessedOutside" 
-                                            placeholder="% of Total Accesses" 
-                                            class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="py-2">
-                                    <div class="flex flex-wrap items-center gap-2">
-                                        <label class="w-full md:w-4/12 font-normal" for="total-size">Total File Size:</label>
-                                        <input 
-                                            id="total-size"
-                                            type="text" 
-                                            name="totalSize" 
-                                            placeholder="GB" 
-                                            class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                        />
-                                    </div>
-                                </div>
+                                
                                 <div class="flex mt-3 gap-4 justify-end py-6 px-12">
                                     <button type="reset" class="rounded-full px-8 py-2 text-sm border border-gray-300 hover:bg-gray-100">
                                         Reset
@@ -396,223 +645,22 @@
                                     </button>
                                 </div>
                             </form>
-                            </div>
-
-                            <div class="tab-content media-preview-main" id="bk-network">
-                               <form action="#">
-                                <div class="py-2 font-medium">
-                                    Network
-                                </div>
-                                <hr>
-                                <div class="py-2">
-                                  <div class="flex flex-col md:flex-row md:items-center gap-2">
-                                      <label class="w-full md:w-4/12 font-normal " for="most-accessed">Most Accessed File:</label>
-                                      <input 
-                                          id="most-accessed"
-                                          type="text" 
-                                          name="mostAccessed" 
-                                          placeholder="# of Accesses per File" 
-                                          class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                      />
-                                  </div>
-                              </div>
-                              
-                                <div class="py-2">
-                                    <div class="flex flex-wrap items-center gap-2">
-                                        <label class="w-full md:w-4/12 font-normal" for="files-deleted">Files Deleted by Users:</label>
-                                        <input 
-                                            id="files-deleted"
-                                            type="text" 
-                                            name="filesDeleted" 
-                                            placeholder="% of Files Deleted" 
-                                            class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                        />
-                                    </div>
-                                    
-                                </div>
-                                <div class="py-2">
-                                    <div class="flex flex-wrap items-center gap-2">
-                                        <label class="w-full md:w-4/12 font-normal" for="accessed-outside">Files Accessed Outside Business Hours:</label>
-                                        <input 
-                                            id="accessed-outside"
-                                            type="text" 
-                                            name="accessedOutside" 
-                                            placeholder="% of Total Accesses" 
-                                            class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="py-2">
-                                    <div class="flex flex-wrap items-center gap-2">
-                                        <label class="w-full md:w-4/12 font-normal" for="total-size">Total File Size:</label>
-                                        <input 
-                                            id="total-size"
-                                            type="text" 
-                                            name="totalSize" 
-                                            placeholder="GB" 
-                                            class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="flex mt-3 gap-4 justify-end py-6 px-12">
-                                    <button type="reset" class="rounded-full px-8 py-2 text-sm border border-gray-300 hover:bg-gray-100">
-                                        Reset
-                                    </button>
-                                    <button type="submit" class="bg-black text-white rounded-full px-8 py-2 text-sm hover:bg-gray-800">
-                                        Save
-                                    </button>
-                                </div>
-                            </form>
-                            </div>
-
-                            <div class="tab-content media-preview-main" id="bk-software">
-                              <form action="#">
-                                <div class="py-2 font-medium">
-                                    Software
-                                </div>
-                                <hr>
-                                <div class="py-2">
-                                  <div class="flex flex-col md:flex-row md:items-center gap-2">
-                                      <label class="w-full md:w-4/12 font-normal " for="most-accessed">Most Accessed File:</label>
-                                      <input 
-                                          id="most-accessed"
-                                          type="text" 
-                                          name="mostAccessed" 
-                                          placeholder="# of Accesses per File" 
-                                          class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                      />
-                                  </div>
-                              </div>
-                              
-                                <div class="py-2">
-                                    <div class="flex flex-wrap items-center gap-2">
-                                        <label class="w-full md:w-4/12 font-normal" for="files-deleted">Files Deleted by Users:</label>
-                                        <input 
-                                            id="files-deleted"
-                                            type="text" 
-                                            name="filesDeleted" 
-                                            placeholder="% of Files Deleted" 
-                                            class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                        />
-                                    </div>
-                                    
-                                </div>
-                                <div class="py-2">
-                                    <div class="flex flex-wrap items-center gap-2">
-                                        <label class="w-full md:w-4/12 font-normal" for="accessed-outside">Files Accessed Outside Business Hours:</label>
-                                        <input 
-                                            id="accessed-outside"
-                                            type="text" 
-                                            name="accessedOutside" 
-                                            placeholder="% of Total Accesses" 
-                                            class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="py-2">
-                                    <div class="flex flex-wrap items-center gap-2">
-                                        <label class="w-full md:w-4/12 font-normal" for="total-size">Total File Size:</label>
-                                        <input 
-                                            id="total-size"
-                                            type="text" 
-                                            name="totalSize" 
-                                            placeholder="GB" 
-                                            class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="flex mt-3 gap-4 justify-end py-6 px-12">
-                                    <button type="reset" class="rounded-full px-8 py-2 text-sm border border-gray-300 hover:bg-gray-100">
-                                        Reset
-                                    </button>
-                                    <button type="submit" class="bg-black text-white rounded-full px-8 py-2 text-sm hover:bg-gray-800">
-                                        Save
-                                    </button>
-                                </div>
-                              </form>
-                            </div>
-
-                            <div class="tab-content media-preview-main" id="bk-location">
-                              <form action="#">
-                              <div class="py-2 font-medium">
-                                  Location
-                              </div>
-                              <hr>
-                              <div class="py-2">
-                                <div class="flex flex-col md:flex-row md:items-center gap-2">
-                                    <label class="w-full md:w-4/12 font-normal " for="most-accessed">Most Accessed File:</label>
-                                    <input 
-                                        id="most-accessed"
-                                        type="text" 
-                                        name="mostAccessed" 
-                                        placeholder="# of Accesses per File" 
-                                        class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                    />
-                                </div>
-                            </div>
-                            
-                              <div class="py-2">
-                                  <div class="flex flex-wrap items-center gap-2">
-                                      <label class="w-full md:w-4/12 font-normal" for="files-deleted">Files Deleted by Users:</label>
-                                      <input 
-                                          id="files-deleted"
-                                          type="text" 
-                                          name="filesDeleted" 
-                                          placeholder="% of Files Deleted" 
-                                          class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                      />
-                                  </div>
-                                  
-                              </div>
-                              <div class="py-2">
-                                  <div class="flex flex-wrap items-center gap-2">
-                                      <label class="w-full md:w-4/12 font-normal" for="accessed-outside">Files Accessed Outside Business Hours:</label>
-                                      <input 
-                                          id="accessed-outside"
-                                          type="text" 
-                                          name="accessedOutside" 
-                                          placeholder="% of Total Accesses" 
-                                          class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                      />
-                                  </div>
-                              </div>
-                              <div class="py-2">
-                                  <div class="flex flex-wrap items-center gap-2">
-                                      <label class="w-full md:w-4/12 font-normal" for="total-size">Total File Size:</label>
-                                      <input 
-                                          id="total-size"
-                                          type="text" 
-                                          name="totalSize" 
-                                          placeholder="GB" 
-                                          class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                      />
-                                  </div>
-                              </div>
-                              <div class="flex mt-3 gap-4 justify-end py-6 px-12">
-                                  <button type="reset" class="rounded-full px-8 py-2 text-sm border border-gray-300 hover:bg-gray-100">
-                                      Reset
-                                  </button>
-                                  <button type="submit" class="bg-black text-white rounded-full px-8 py-2 text-sm hover:bg-gray-800">
-                                      Save
-                                  </button>
-                              </div>
-                              </form>
                             </div>
 
                             <div class="tab-content media-preview-main" id="bk-system-permission">
                               <form action="#">
                               <div class="py-2 font-medium">
-                                System Permission
+                                System Permission Activity
                               </div>
                               <hr>
                               <div class="py-2">
                                 <div class="flex flex-col md:flex-row md:items-center gap-2">
-                                    <label class="w-full md:w-4/12 font-normal " for="most-accessed">Most Accessed File:</label>
+                                    <label class="w-full md:w-3/12   font-normal " for="most-accessed">CPU Usage (%) :</label>
                                     <input 
                                         id="most-accessed"
                                         type="text" 
                                         name="mostAccessed" 
-                                        placeholder="# of Accesses per File" 
+                                        placeholder="Please enter the value" 
                                         class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
                                     />
                                 </div>
@@ -620,12 +668,12 @@
                             
                               <div class="py-2">
                                   <div class="flex flex-wrap items-center gap-2">
-                                      <label class="w-full md:w-4/12 font-normal" for="files-deleted">Files Deleted by Users:</label>
+                                      <label class="w-full md:w-3/12   font-normal" for="files-deleted">Memory Usage (%) :</label>
                                       <input 
                                           id="files-deleted"
                                           type="text" 
                                           name="filesDeleted" 
-                                          placeholder="% of Files Deleted" 
+                                          placeholder="Please enter the value" 
                                           class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
                                       />
                                   </div>
@@ -633,28 +681,17 @@
                               </div>
                               <div class="py-2">
                                   <div class="flex flex-wrap items-center gap-2">
-                                      <label class="w-full md:w-4/12 font-normal" for="accessed-outside">Files Accessed Outside Business Hours:</label>
+                                      <label class="w-full md:w-3/12   font-normal" for="accessed-outside">Storage Usage (%) :</label>
                                       <input 
                                           id="accessed-outside"
                                           type="text" 
                                           name="accessedOutside" 
-                                          placeholder="% of Total Accesses" 
+                                          placeholder="Please enter the value" 
                                           class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
                                       />
                                   </div>
                               </div>
-                              <div class="py-2">
-                                  <div class="flex flex-wrap items-center gap-2">
-                                      <label class="w-full md:w-4/12 font-normal" for="total-size">Total File Size:</label>
-                                      <input 
-                                          id="total-size"
-                                          type="text" 
-                                          name="totalSize" 
-                                          placeholder="GB" 
-                                          class="py-1 w-full md:w-2/4 bg-c-lighten-gray border border-gray-300 rounded-md outline-none pl-5"
-                                      />
-                                  </div>
-                              </div>
+                              
                               <div class="flex mt-3 gap-4 justify-end py-6 px-12">
                                   <button type="reset" class="rounded-full px-8 py-2 text-sm border border-gray-300 hover:bg-gray-100">
                                       Reset
@@ -673,5 +710,14 @@
       </main>
     <script src="script/sidebar.js"></script>
     <script src="script/benchmark.js"></script>
+    <script>
+      //sub dropdown toggle
+      function toggleSubDropadmin() {
+          const subDrop = document.getElementById("subdrop-admin");
+          const arrow = document.querySelector("#starred-link .subdrop-right-admin");
+          subDrop.classList.toggle("hidden");
+          arrow.classList.toggle("rotate");
+        } 
+    </script>
 </body>
 </html>
